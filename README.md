@@ -1,16 +1,28 @@
-# React + Vite
+# Mini Aplicação React - Gerenciador de Lista de Tarefas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[cite_start]Este projeto é um trabalho da Unidade 1 para a disciplina Front-end framework do curso de Análise e Desenvolvimento de Sistemas (ADS). [cite: 1, 2, 5, 26]
 
-Currently, two official plugins are available:
+[cite_start]O objetivo foi construir uma aplicação simples em React para gerenciar uma lista, utilizando conceitos fundamentais como componentes, props, state, eventos e renderização condicional. [cite: 4, 6, 7, 9]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👤 Integrante
 
-## React Compiler
+* **Nome:** Eduardo Pereira Soares Santos Pessoa
+* **Matrícula:** 01809366
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Funcionalidades Implementadas
 
-## Expanding the ESLint configuration
+* [cite_start]Criação de componentes reutilizáveis (`Header`, `Footer`, `Alert`, `AlunoCard`). [cite: 6]
+* Exibição de uma lista de dados (alunos) a partir de um array.
+* [cite_start]Manipulação de estado (`state`) para interatividade com botões (contador de cliques). [cite: 7]
+* [cite_start]Renderização condicional para exibir alertas de sucesso e erro. [cite: 9]
+* Manipulação de listas no estado para remover itens (ação de remover aluno).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tecnologias Utilizadas
+
+* **React:** Biblioteca para a construção da interface de usuário.
+* **Vite:** Ferramenta de desenvolvimento e construção do projeto.
+* **JavaScript:** Linguagem de programação base.
+* **CSS:** Utilizado para estilização básica dos componentes.
+* [cite_start]**Git & GitHub:** Para versionamento e hospedagem do código. [cite: 10]
+
+---
