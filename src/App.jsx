@@ -4,19 +4,28 @@ import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ListaAlunos from './components/ListaAlunos';
-import Alert from './components/Alert'; // 1. Importar o novo componente Alert
+import Alert from './components/Alert';
 import './App.css';
+
+// Dados iniciais dos alunos
+const alunosIniciais = [
+  { id: 1, nome: 'Ana Carolina' },
+  { id: 2, nome: 'Bruno Gomes' },
+  { id: 3, nome: 'Carla Dias' },
+  { id: 4, nome: 'Daniel Martins' },
+  { id: 5, nome: 'Eduarda Oliveira' }
+];
 
 function App() {
   const [contador, setContador] = useState(0);
-  // 2. State para o alerta. Inicia como 'null' (nenhum alerta visível)
   const [alerta, setAlerta] = useState(null);
+  // 1. O state da lista de alunos agora vive no App.jsx
+  const [alunos, setAlunos] = useState(alunosIniciais);
 
   function lidarComClique() {
     setContador(contador + 1);
   }
 
-  // 3. Funções para mostrar os alertas
   function mostrarAlertaSucesso() {
     setAlerta({ message: 'Ação concluída com sucesso!', type: 'success' });
   }
@@ -25,13 +34,24 @@ function App() {
     setAlerta({ message: 'Ocorreu um erro na operação.', type: 'error' });
   }
 
+  // 2. Função de AÇÃO para remover o último aluno
+  function handleRemoverAluno() {
+    if (alunos.length === 0) {
+      mostrarAlertaErro();
+      return; // Para a execução se não houver alunos
+    }
+    // Cria uma CÓPIA do array sem o último elemento
+    const novaLista = alunos.slice(0, -1);
+    setAlunos(novaLista); // Atualiza o state com a nova lista
+    mostrarAlertaSucesso();
+  }
+
   return (
     <div className="App">
       <Header />
       <main>
         <h2>Bem-vindo, [Seu Primeiro Nome]!</h2>
 
-        {/* 4. Renderização Condicional do Alerta */}
         {alerta && <Alert message={alerta.message} type={alerta.type} />}
 
         <div>
@@ -39,13 +59,18 @@ function App() {
           <p>Você clicou {contador} vezes.</p>
         </div>
 
-        {/* 5. Novos botões para acionar os alertas */}
         <div>
           <button onClick={mostrarAlertaSucesso}>Mostrar Alerta de Sucesso</button>
           <button onClick={mostrarAlertaErro}>Mostrar Alerta de Erro</button>
         </div>
+        
+        <hr />
 
-        <ListaAlunos />
+        {/* 3. Botão de Ação */}
+        <button onClick={handleRemoverAluno}>Ação: Remover Último Aluno</button>
+
+        {/* 4. Passando a lista de alunos como prop */}
+        <ListaAlunos alunos={alunos} />
       </main>
       <Footer />
     </div>
