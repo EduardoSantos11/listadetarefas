@@ -7,7 +7,9 @@ import ListaAlunos from './components/ListaAlunos';
 import Alert from './components/Alert';
 import './App.css';
 
-/
+// src/App.jsx (no topo do arquivo)
+
+// Dados iniciais dos alunos (agora com matrícula)
 const alunosIniciais = [
   { id: 1, nome: 'Ana Carolina', matricula: '20250101' },
   { id: 2, nome: 'Bruno Gomes', matricula: '20250102' },
