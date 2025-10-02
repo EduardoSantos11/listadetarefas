@@ -7,13 +7,13 @@ import ListaAlunos from './components/ListaAlunos';
 import Alert from './components/Alert';
 import './App.css';
 
-// Dados iniciais dos alunos
+/
 const alunosIniciais = [
-  { id: 1, nome: 'Ana Carolina' },
-  { id: 2, nome: 'Bruno Gomes' },
-  { id: 3, nome: 'Carla Dias' },
-  { id: 4, nome: 'Daniel Martins' },
-  { id: 5, nome: 'Eduarda Oliveira' }
+  { id: 1, nome: 'Ana Carolina', matricula: '20250101' },
+  { id: 2, nome: 'Bruno Gomes', matricula: '20250102' },
+  { id: 3, nome: 'Carla Dias', matricula: '20250103' },
+  { id: 4, nome: 'Daniel Martins', matricula: '20250104' },
+  { id: 5, nome: 'Eduarda Oliveira', matricula: '20250105' }
 ];
 
 function App() {
